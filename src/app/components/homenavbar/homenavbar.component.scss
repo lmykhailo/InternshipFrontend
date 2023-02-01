@@ -1,0 +1,38 @@
+.topnav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont;
+    font-size: 17.5px;
+    a:hover {
+        background-color: gray;
+        color: black;
+        height: 60px;
+    }
+}
+
+.dvigunity {
+    width: 100px;
+    height: 55px;
+    line-height: 55px;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav-link {
+    display: inline-block;
+    width: 125px;
+    height: 50px;
+    color: White;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont;
+    border-radius: 5px;
+}
