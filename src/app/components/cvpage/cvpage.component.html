@@ -1,15 +1,121 @@
-<div class="d-flex justify-content-center">
-    <mat-card class="example-card mt-5 mr-2" *ngFor="let cv of cvData">
-        <mat-card-header>
-            <mat-card-title>{{cv.position}}</mat-card-title>
-            <mat-card-subtitle>{{cv.startdate}} - {{cv.enddate}}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            <p>{{cv.description}}</p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button>Edit</button>
-            <button mat-button>Delete</button>
-        </mat-card-actions>
-    </mat-card>
+<div style="overflow-x:auto;">
+    <div class="d-flex justify-content-center">
+        <div class ="flex-cv-container">
+            <mat-card class="example-card mt-5 mr-2" *ngFor="let cv of cvData">
+                <mat-card-header>
+                    <mat-card-title>{{cv.position}}</mat-card-title>
+                    <mat-card-subtitle>{{cv.startdate}} - {{cv.enddate}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{cv.description}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <!--<button mat-button>Edit</button>
+                    <button mat-button>Delete</button>-->
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<div class="full" style="overflow-x:auto;">
+    <div class="left">
+        <div class="image">
+            <img src=
+"https://th.bing.com/th/id/R.6a571343c962f8bac3310bea4568f83e?rik=9L%2bE8vOaHAklCw&pid=ImgRaw&r=0"
+                 alt="gfg-logo"
+                 style="width:100px;height:100px;">
+        </div>
+        <div class="Contact">
+            <h2>Contact</h2>
+            <p><b>Email id:</b>lollmao69@gmail.com</p>
+            <p><b>Mobile no :</b>+38-066-456-2345</p>
+        </div>
+        <div class="Skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><b>Programming Languages :
+                  Python, Java, C++</b></li>
+                <li><b>Frontend : HTML5, CSS3,
+                  JavaScript, React</b></li>
+                <li><b>Backend : Node.js</b></li>
+            </ul>
+        </div>
+        <div class="Language">
+            <h2>Language</h2>
+            <ul>
+                <li>English (native)</li>
+                <li>French (B2)</li>
+            </ul>
+        </div>
+        <div class="Hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Sunbathing</li>
+                <li>Swimming and gym</li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div class="name">
+            <h1>Nolan Freeman</h1>
+        </div>
+        <div class="title">
+            <p>Backend Developer</p>
+        </div>
+        <div class="project">
+            <ul>
+                <li>
+                    <h2>DEVOPS TL for TMS (talant mangement System) at EPUM</h2>
+                    <p>IT-Infrastructure determining for TSM, SQL Server setup based on AWS services.</p>
+                </li>
+                <li>
+                    <h2>Backend developer for corezoid in Bank MEGA</h2>
+                    <p>Creating fully virtual repayment and payment system based on corezoid</p>
+                </li>
+            </ul>
+        </div>
+        <div class="Summary">
+            <h2>Summary</h2>
+            <p>To secure a challenging position in a
+              reputable organization
+                to expand my learning knowledge and skill
+            </p>
+        </div>
+        <div class="Experience">
+            <h2>Experience</h2>
+            <h3>EPUM - DEVOPS TL</h3>
+            <p>January 2020 to June 2021</p>
+            <ul>
+                <li>Managing TSM devops team</li>
+                <li>SQL server setup based on AWS services</li>
+            </ul>
+            <h3>Backend developer - Bank MEGA</h3>
+            <p>June 2021 to Now</p>
+            <ul>
+                <li>Implementing corezoid system.</li>
+                <li>Designing project & planning</li>
+                <li>Creating repayment and payment systems</li>
+            </ul>
+        </div>
+        <div class="Education">
+            <h2>Education</h2>
+            <table>
+                <tr>
+                    <th>University/college  </th>
+                    <th>Passing year  </th>
+                    <th>percentage/cgpa</th>
+                </tr>
+                <tr>
+                    <td>FIT</td>
+                    <td>2014</td>
+                    <td>8.9</td>
+                </tr>
+                <tr>
+                    <td>Cambridge</td>
+                    <td>2020</td>
+                    <td>89%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>

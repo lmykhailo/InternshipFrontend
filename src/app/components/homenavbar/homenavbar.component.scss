@@ -36,3 +36,22 @@
     font-family: -apple-system, BlinkMacSystemFont;
     border-radius: 5px;
 }
+
+.flex-homenavbar-flexbox{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: stretch;
+}
+.flex-homenavbar-flexbox > div{
+    flex: 1 1 auto;
+}
+.todo-list-item{
+    flex-grow: 2;
+    color: White;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont;
+    border-radius: 5px;
+}

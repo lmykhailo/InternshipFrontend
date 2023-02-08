@@ -1,38 +1,41 @@
 <div class="d-flex">
     <button (click)="AddButtonToggle()" type="button" data-toggle="modal" data-target="#exampleModal" class="btn-add btn-sm btn-secondary">Add project</button>
 </div>
-
-<table class="table table-bordered table-striped mt-3">
-    <thead>
-        <tr>
-            <td>Project ID</td>
-            <td>Project Name</td>
-            <td>Billable</td>
-            <td>People Assigned</td>
-            <td>Start Date</td>
-            <td>Budget</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let project of projectData">
-            <td>{{project.id}}</td>
-            <td>{{project.name}}</td>
-            <td>{{project.billable}}</td>
-            <td>{{project.assignedpeople}}</td>
-            <td>{{project.startdate}}</td>
-            <td>{{project.budget}}</td>
-            <td>{{project.description}}</td>
-            <td>
-                <button (click)="setEditData(project)" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-warning">
-                  <i class="fa fa-edit"></i>Edit</button>
-                <button (click)="deleteProject(project)" class="btn btn-sm btn-danger">
-                  <i class="fa fa-remove"></i>Delete</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
+<div style="overflow-x:auto;">
+<div class = "flex-project-container">
+    <table class="table table-bordered table-striped mt-3">
+        <thead>
+            <tr>
+                <td>Project ID</td>
+                <td>Project Name</td>
+                <td>Billable</td>
+                <td>People Assigned</td>
+                <td>Start Date</td>
+                <td>Budget</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let project of projectData">
+                <td>{{project.id}}</td>
+                <td>{{project.name}}</td>
+                <td>{{project.billable}}</td>
+                <td>{{project.assignedpeople}}</td>
+                <td>{{project.startdate}}</td>
+                <td>{{project.budget}}</td>
+                <td>{{project.description}}</td>
+                <td>
+                    <button (click)="setEditData(project)" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-warning">
+                      <i class="fa fa-edit"></i>Edit</button>
+                    <button (click)="deleteProject(project)" class="btn btn-sm btn-danger">
+                      <i class="fa fa-remove"></i>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+</div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

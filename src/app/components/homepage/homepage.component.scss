@@ -1,0 +1,26 @@
+
+.flex-homepage-body{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: stretch;
+}
+.flex-homepage-body >div{
+    flex: 1 1 auto;
+}
+.flex-homepage-body h1,h2, li{
+    color: salmon;
+    font-family: -apple-system, BlinkMacSystemFont;
+}
+.homepage-item{
+    flex-grow: 2;
+    color: White;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont;
+    border-radius: 5px;
+}
+.main-image{
+    background-color: lightcyan;
+}
