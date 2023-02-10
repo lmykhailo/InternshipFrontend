@@ -1,86 +1,88 @@
-<div class="d-flex">
-    <button (click)="AddButtonToggle()" type="button" data-toggle="modal" data-target="#exampleModal" class="btn-add btn-sm btn-secondary">Add project</button>
-</div>
-<div style="overflow-x:auto;">
-<div class = "flex-project-container">
-    <table class="table table-bordered table-striped mt-3">
-        <thead>
-            <tr>
-                <td>Project ID</td>
-                <td>Project Name</td>
-                <td>Billable</td>
-                <td>People Assigned</td>
-                <td>Start Date</td>
-                <td>Budget</td>
-                <td>Description</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let project of projectData">
-                <td>{{project.id}}</td>
-                <td>{{project.name}}</td>
-                <td>{{project.billable}}</td>
-                <td>{{project.assignedpeople}}</td>
-                <td>{{project.startdate}}</td>
-                <td>{{project.budget}}</td>
-                <td>{{project.description}}</td>
-                <td>
-                    <button (click)="setEditData(project)" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-warning">
-                      <i class="fa fa-edit"></i>Edit</button>
-                    <button (click)="deleteProject(project)" class="btn btn-sm btn-danger">
-                      <i class="fa fa-remove"></i>Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    
-</div>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Project details</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-            </div>
-            <div class="modal-body">
-                <form [formGroup]="formValue">
-                    <div class="form-control">
-                        <label for="text">Project ID</label>
-                        <input type="text" formControlName="id" name="id" id="id" placeholder="">
-                    </div>
-                    <div class="form-control">
-                        <label for="text">Name of project</label>
-                        <input type="text" formControlName="name" name="name" id="name" placeholder="">
-                    </div>
-                    <div class="form-control form-control-check">
-                        <label for="text">Billable</label>
-                        <input type="checkbox" formControlName="billable" name="billable" id="billable" placeholder="">
-                    </div>
-                    <div class="form-control">
-                        <label for="text">People assigned</label>
-                        <input type="text" formControlName="assignedpeople" name="assignedpeople" id="assignedpeople" placeholder="">
-                    </div>
-                    <div class="form-control">
-                        <label for="text">Start Date</label>
-                        <input type="date" formControlName="startdate" name="startdate" id="startdate" placeholder="">
-                    </div>
-                    <div class="form-control">
-                        <label for="text">Budget</label>
-                        <input type="text" formControlName="budget" name="budget" id="budget" placeholder="">
-                    </div>
-                    <div class="form-control">
-                        <label for="text">Description</label>
-                        <input type="text" formControlName="description" name="description" id="description" placeholder="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button *ngIf="showButtonAdd" type="button" class="btn btn-primary" (click)="createProject()">Add</button>
-                        <button *ngIf="showButtonEdit" type="button" class="btn btn-primary" (click)="editProject()">Save</button>
-                    </div>
-                </form>
+<div class="main-image">
+    <div class="d-flex">
+        <button (click)="AddButtonToggle()" type="button" data-toggle="modal" data-target="#exampleModal" class="btn-add btn-sm btn-secondary">Add project</button>
+    </div>
+    <div style="overflow-x:auto;">
+    <div class = "flex-project-container">
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <td>Project ID</td>
+                    <td>Project Name</td>
+                    <td>Billable</td>
+                    <td>People Assigned</td>
+                    <td>Start Date</td>
+                    <td>Budget</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let project of projectData">
+                    <td>{{project.id}}</td>
+                    <td>{{project.name}}</td>
+                    <td>{{project.billable}}</td>
+                    <td>{{project.assignedpeople}}</td>
+                    <td>{{project.startdate}}</td>
+                    <td>{{project.budget}}</td>
+                    <td>{{project.description}}</td>
+                    <td>
+                        <button (click)="setEditData(project)" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-warning">
+                          <i class="fa fa-edit"></i>Edit</button>
+                        <button (click)="deleteProject(project)" class="btn btn-sm btn-danger">
+                          <i class="fa fa-remove"></i>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Project details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="formValue">
+                        <div class="form-control">
+                            <label for="text">Project ID</label>
+                            <input type="text" formControlName="id" name="id" id="id" placeholder="">
+                        </div>
+                        <div class="form-control">
+                            <label for="text">Name of project</label>
+                            <input type="text" formControlName="name" name="name" id="name" placeholder="">
+                        </div>
+                        <div class="form-control form-control-check">
+                            <label for="text">Billable</label>
+                            <input type="checkbox" formControlName="billable" name="billable" id="billable" placeholder="">
+                        </div>
+                        <div class="form-control">
+                            <label for="text">People assigned</label>
+                            <input type="text" formControlName="assignedpeople" name="assignedpeople" id="assignedpeople" placeholder="">
+                        </div>
+                        <div class="form-control">
+                            <label for="text">Start Date</label>
+                            <input type="date" formControlName="startdate" name="startdate" id="startdate" placeholder="">
+                        </div>
+                        <div class="form-control">
+                            <label for="text">Budget</label>
+                            <input type="text" formControlName="budget" name="budget" id="budget" placeholder="">
+                        </div>
+                        <div class="form-control">
+                            <label for="text">Description</label>
+                            <input type="text" formControlName="description" name="description" id="description" placeholder="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button *ngIf="showButtonAdd" type="button" class="btn btn-primary" (click)="createProject()">Add</button>
+                            <button *ngIf="showButtonEdit" type="button" class="btn btn-primary" (click)="editProject()">Save</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+</div>
