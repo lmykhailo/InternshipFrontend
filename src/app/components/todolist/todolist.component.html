@@ -1,0 +1,86 @@
+<div  style="overflow-x:auto;" class = "main-image">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div>
+                <mat-card class="mt-4">
+                    <form [formGroup]="todoForm">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Task</mat-label>
+                            <input formControlName="name" matInput placeholder="Task">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Description</mat-label>
+                            <input formControlName="description" matInput placeholder="Description">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Date</mat-label>
+                            <input type="date" formControlName="duedate" matInput placeholder="Date">
+                        </mat-form-field>
+                        <button (click)="createProject()" mat-raised-button class="btn btn-secondary">Add Task</button>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <table class="table table-bordered table-striped mt-4 ">
+                <thead>
+                    <tr>
+                        <td>Task Name</td>
+                        <td>Description</td>
+                        <td>Due Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let todolist of todoData">
+                        <td>{{todolist.name}}</td>
+                        <td>{{todolist.description}}</td>
+                        <td>{{todolist.duedate}}</td>
+                        <td>
+                            <button (click)="setEditData(todolist)" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-warning">
+                              <i class="fa fa-edit"></i>Edit</button>
+                            <button (click)="deleteProject(todolist)" class="btn btn-sm btn-accept">
+                              <i class="fa fa-remove"></i>Mark as done</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Todo details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="todoForm">
+                    <div class="form-control">
+                        <label for="text">Name of task</label>
+                        <input type="text" formControlName="name" name="name" id="name" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Due Date</label>
+                        <input type="date" formControlName="duedate" name="duedate" id="duedate" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <label for="text">Description</label>
+                        <input type="text" formControlName="description" name="description" id="description" placeholder="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal" (click)="ResetToggle()">Close</button>
+                        <button *ngIf="showButtonAdd" type="button" class="btn btn-primary" (click)="createProject()">Add</button>
+                        <button *ngIf="showButtonEdit" type="button" class="btn btn-primary" (click)="editProject()">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

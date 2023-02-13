@@ -1,0 +1,71 @@
+.example-card {
+    max-width: 80%;
+}
+
+.flex-cv-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: stretch;
+}
+
+.flex-cv-container>div {
+    flex: 1 1 auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(253, 254, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full {
+    width: 100%;
+    background-color: rgb(245, 239, 231);
+    margin: 0px;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+
+.left {
+    position: initial;
+    background-color: gray;
+    padding: 20px;
+}
+
+.right {
+    position: initial;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.image,
+.Contact,
+.Skills,
+.Language,
+.Hobbies,
+.title,
+.Summary,
+.Experience,
+.Education,
+.project {
+    margin-bottom: 30px;
+}
+
+.h2 {
+    background-color: rgb(4, 96, 150);
+}
+
+.main-image {
+    background-color: white;
+}
